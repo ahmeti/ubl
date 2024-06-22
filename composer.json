@@ -1,0 +1,27 @@
+{
+    "name": "ahmeti/ubl",
+    "description": "UBL (Universal Business Language) for PHP",
+    "keywords": ["ubl", "universal", "business", "language"],
+    "homepage": "https://github.com/ahmeti/ubl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmet Imamoglu",
+            "email": "ahmet@ahmeti.com.tr",
+            "homepage": "https://ahmeti.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ahmeti\\Ubl\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
