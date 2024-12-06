@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class LineResponse
 {
     /**
-     * Kalem Bilgisi
+     * @param  LineReference|null  $LineReference  Kalem Bilgisi
+     * @param  Response|null  $Response  Yanıt
      */
-    public ?LineReference $LineReference = null;
-
-    /**
-     * Yanıt
-     */
-    public ?Response $Response = null;
+    public function __construct(
+        public ?LineReference $LineReference = null,
+        public ?Response $Response = null
+    ) {}
 }

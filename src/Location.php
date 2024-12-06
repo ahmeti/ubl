@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class Location
 {
     /**
-     * Mekanı tanımlamak için kullanılır (örneğin GLN numarası)
+     * @param  string|null  $ID  Mekanı tanımlamak için kullanılır (örneğin GLN numarası)
+     * @param  Address|null  $Address  Addres bilgisini tutar.
      */
-    public ?string $ID = null;
-
-    /**
-     * Addres bilgisini tutar.
-     */
-    public ?Address $Address = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?Address $Address = null
+    ) {}
 }

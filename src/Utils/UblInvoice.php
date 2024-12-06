@@ -1,8 +1,8 @@
 <?php
 
-namespace Ahmeti\Ubl;
+namespace Ahmeti\Ubl\Utils;
 
-class UblInvoiceHelper extends UblHelper
+class UblInvoice extends UblHelper
 {
     public function getXML(): string
     {

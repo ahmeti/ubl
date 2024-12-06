@@ -8,8 +8,9 @@ namespace Ahmeti\Ubl;
 class DigitalSignatureAttachment
 {
     /**
-     * Referans Bilgisi
-     * Stowage
+     * @param  ExternalReference|null  $ExternalReference  Referans Bilgisi (Stowage)
      */
-    public ?ExternalReference $ExternalReference = null;
+    public function __construct(
+        public ?ExternalReference $ExternalReference = null
+    ) {}
 }

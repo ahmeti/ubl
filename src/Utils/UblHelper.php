@@ -1,15 +1,16 @@
 <?php
 
-namespace Ahmeti\Ubl;
+namespace Ahmeti\Ubl\Utils;
+
+use Ahmeti\Ubl\ApplicationResponse;
+use Ahmeti\Ubl\DespatchAdvice;
+use Ahmeti\Ubl\Invoice;
 
 abstract class UblHelper
 {
-    protected Invoice|DespatchAdvice|ApplicationResponse $object;
-
-    public function __construct(Invoice|DespatchAdvice|ApplicationResponse $object)
-    {
-        $this->object = $object;
-    }
+    public function __construct(
+        protected Invoice|DespatchAdvice|ApplicationResponse $object
+    ) {}
 
     protected function toXml(object $object, string &$xml): void
     {

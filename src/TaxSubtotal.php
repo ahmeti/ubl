@@ -8,47 +8,23 @@ namespace Ahmeti\Ubl;
 class TaxSubtotal
 {
     /**
-     * Verginin üzerinden hesaplandığı tutar (matrah) bilgisi girilecektir.
-     * (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $TaxableAmount  Verginin üzerinden hesaplandığı tutar (matrah) bilgisi girilecektir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $TaxAmount  Hesaplanan Vergi Tutarıdır. (val = string, attrs = [currencyID="TRY"])
+     * @param  int|null  $CalculationSequenceNumeric  Vergi hesaplamasında belli bir sıra izlenmesi veya birden fazla vergi hesaplaması yapılması halinde ilgili sıra numarası girilecektir.
+     * @param  array|null  $TransactionCurrencyTaxAmount  Belge para birimi cinsinden toplam vergi tutarıdır. (val = string, attrs = [currencyID="TRY"])
+     * @param  int|null  $Percent  Vergi oranı girilebilecektir.
+     * @param  array|null  $BaseUnitMeasure  Vergileme ölçüsü olarak miktar(kilogram,  metre vb.) kullanılması halinde ilgili tarife bilgileri bu elemana girilecektir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $PerUnitAmount  Vergileme ölçüsü olarak tutar(perakende satış fiyatı gibi.) kullanılması halinde ilgili tarife bilgileri bu elemana girilecektir. (val = string, attrs = [currencyID="TRY"])
+     * @param  TaxCategory|null  $TaxCategory  Verginin türü ile ilgili bilgiler girilecektir.
      */
-    public ?array $TaxableAmount = null;
-
-    /**
-     * Hesaplanan Vergi Tutarıdır.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $TaxAmount = null;
-
-    /**
-     * Vergi hesaplamasında belli bir sıra izlenmesi veya birden fazla vergi hesaplaması yapılması halinde ilgili sıra numarası girilecektir.
-     */
-    public ?int $CalculationSequenceNumeric = null;
-
-    /**
-     * Belge para birimi cinsinden toplam vergi tutarıdır.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $TransactionCurrencyTaxAmount = null;
-
-    /**
-     * Vergi oranı girilebilecektir.
-     */
-    public ?int $Percent = null;
-
-    /**
-     * Vergileme ölçüsü olarak miktar(kilogram,  metre vb.) kullanılması halinde ilgili tarife bilgileri bu elemana girilecektir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $BaseUnitMeasure = null;
-
-    /**
-     * Vergileme ölçüsü olarak tutar(perakende satış fiyatı gibi.) kullanılması halinde ilgili tarife bilgileri bu elemana girilecektir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $PerUnitAmount = null;
-
-    /**
-     * Verginin türü ile ilgili bilgiler girilecektir.
-     */
-    public ?TaxCategory $TaxCategory = null;
+    public function __construct(
+        public ?array $TaxableAmount = null,
+        public ?array $TaxAmount = null,
+        public ?int $CalculationSequenceNumeric = null,
+        public ?array $TransactionCurrencyTaxAmount = null,
+        public ?int $Percent = null,
+        public ?array $BaseUnitMeasure = null,
+        public ?array $PerUnitAmount = null,
+        public ?TaxCategory $TaxCategory = null
+    ) {}
 }

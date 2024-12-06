@@ -4,7 +4,8 @@ namespace Ahmeti\Ubl;
 
 class DespatchSupplierParty
 {
-    public ?Party $Party = null;
-
-    public ?DespatchContact $DespatchContact = null;
+    public function __construct(
+        public ?Party $Party = null,
+        public ?DespatchContact $DespatchContact = null
+    ) {}
 }

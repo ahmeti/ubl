@@ -4,5 +4,7 @@ namespace Ahmeti\Ubl;
 
 class BuyerCustomerParty
 {
-    public ?Party $Party = null;
+    public function __construct(
+        public ?Party $Party = null
+    ) {}
 }

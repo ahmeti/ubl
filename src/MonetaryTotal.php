@@ -8,44 +8,21 @@ namespace Ahmeti\Ubl;
 class MonetaryTotal
 {
     /**
-     * Mal/hizmet miktarı ile Mal/hizmet birim fiyatının çarpımı ile bulunan tutardır.
-     * (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $LineExtensionAmount  Mal/hizmet miktarı ile Mal/hizmet birim fiyatının çarpımı ile bulunan tutardır. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $TaxExclusiveAmount  Vergiler hariç, ıskonto veya artırım dahil toplam tutar girilir. (Vergi Matrahı) (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $TaxInclusiveAmount  Vergiler, iskonto ve artırım dahil toplam tutar girilir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $AllowanceTotalAmount  Toplam iskonto tutarı girilir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $ChargeTotalAmount  Toplam fiyat artırımı tutarı girilir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $PayableRoundingAmount  Yuvarlama tutarı girilir. (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $PayableAmount  Ödenecek tutar girilir. (val = string, attrs = [currencyID="TRY"])
      */
-    public ?array $LineExtensionAmount = null;
-
-    /**
-     * Vergiler hariç, ıskonto veya artırım dahil toplam tutar girilir.(Vergi Matrahı).
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $TaxExclusiveAmount = null;
-
-    /**
-     * Vergiler, ıskonto ve artırım dahil toplam tutar girilir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $TaxInclusiveAmount = null;
-
-    /**
-     * Toplam ıskonto tutarı girilir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $AllowanceTotalAmount = null;
-
-    /**
-     * Toplam fiyat artırımı tutarı girilir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $ChargeTotalAmount = null;
-
-    /**
-     * Yuvarlama tutarı girilir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $PayableRoundingAmount = null;
-
-    /**
-     * Ödenecek tutar girilir.
-     * (val = string, attrs = [currencyID="TRY"])
-     */
-    public ?array $PayableAmount = null;
+    public function __construct(
+        public ?array $LineExtensionAmount = null,
+        public ?array $TaxExclusiveAmount = null,
+        public ?array $TaxInclusiveAmount = null,
+        public ?array $AllowanceTotalAmount = null,
+        public ?array $ChargeTotalAmount = null,
+        public ?array $PayableRoundingAmount = null,
+        public ?array $PayableAmount = null
+    ) {}
 }

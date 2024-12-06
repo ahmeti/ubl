@@ -8,42 +8,23 @@ namespace Ahmeti\Ubl;
 class ItemInstance
 {
     /**
-     * Ürün İz Numarası girilebilir.
+     * @param  string|null  $ProductTraceID  Ürün İz Numarası girilebilir.
+     * @param  string|null  $ManufacturedDate  Üretim tarihi girilir.
+     * @param  string|null  $ManufacturedTime  Üretim zamanı girilir.
+     * @param  string|null  $BestBeforeDate  Son kullanım tarihi girilir.
+     * @param  string|null  $RegistrationID  Kayıt numarası girilir.
+     * @param  string|null  $SerialID  Seri numarası girilir.
+     * @param  string|null  $AdditionalItemProperty  Ürün hakkında başka özellikler var ise girilir.
+     * @param  string|null  $LotIdentification  Lot numarası girilir
      */
-    public ?string $ProductTraceID = null;
-
-    /**
-     * Üretim tarihi girilir.
-     */
-    public ?string $ManufacturedDate = null;
-
-    /**
-     * Üretim zamanı girilir.
-     */
-    public ?string $ManufacturedTime = null;
-
-    /**
-     * Son kullanım tarihi girilir.
-     */
-    public ?string $BestBeforeDate = null;
-
-    /**
-     * Kayıt numarası girilir.
-     */
-    public ?string $RegistrationID = null;
-
-    /**
-     * Seri numarası girilir.
-     */
-    public ?string $SerialID = null;
-
-    /**
-     * Ürün hakkında başka özellikler var ise girilir.
-     */
-    public ?string $AdditionalItemProperty = null;
-
-    /**
-     * Lot numarası girilir
-     */
-    public ?string $LotIdentification = null;
+    public function __construct(
+        public ?string $ProductTraceID = null,
+        public ?string $ManufacturedDate = null,
+        public ?string $ManufacturedTime = null,
+        public ?string $BestBeforeDate = null,
+        public ?string $RegistrationID = null,
+        public ?string $SerialID = null,
+        public ?string $AdditionalItemProperty = null,
+        public ?string $LotIdentification = null
+    ) {}
 }

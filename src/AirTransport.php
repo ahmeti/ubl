@@ -8,7 +8,9 @@ namespace Ahmeti\Ubl;
 class AirTransport
 {
     /**
-     * Havayolu araç kodu
+     * @param  string|null  $AircraftID  Havayolu araç kodu
      */
-    public ?string $AircraftID = null;
+    public function __construct(
+        public ?string $AircraftID = null
+    ) {}
 }

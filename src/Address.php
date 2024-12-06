@@ -8,68 +8,33 @@ namespace Ahmeti\Ubl;
 class Address
 {
     /**
-     * Mahalle, meydan, bulvar, cadde, sokak ve küme evlere karşılık gelecek şekilde,
-     * standart sayısal eşdeğer olarak TÜİK tarafından verilmiş olan “sabit tanımlama numarası” girilebilecektir.
+     * @param  string|null  $ID  Mahalle, meydan, bulvar, cadde, sokak ve küme evlere karşılık gelecek şekilde, standart sayısal eşdeğer olarak TÜİK tarafından verilmiş olan “sabit tanımlama numarası” girilebilecektir.
+     * @param  string|null  $Postbox  Posta Kutusu girilecektir.
+     * @param  string|null  $Room  İç kapı numarası girilecektir.
+     * @param  string|null  $StreetName  Meydan/bulvar/cadde/sokak/küme evler/site adı bilgileri girilecektir.
+     * @param  string|null  $BlockName  Blok adı girilebilecektir.
+     * @param  string|null  $BuildingName  Bina girilebilecektir.
+     * @param  string|null  $BuildingNumber  Bina veya bloğa ait dış kapı numarası girilecektir.
+     * @param  string|null  $CitySubdivisionName  İlçe/semt adı bilgileri girilecektir.
+     * @param  string|null  $CityName  İl adı girilecektir.
+     * @param  string|null  $PostalZone  Posta kod numarası girilecektir.
+     * @param  string|null  $Region  Kasaba/köy/mezra/mevkii bilgileri girilecektir.
+     * @param  string|null  $District  Mahalle adı girilecektir.
+     * @param  Country|null  $Country  Ülke
      */
-    public ?string $ID = null;
-
-    /**
-     * Posta Kutusu girilecektir.
-     */
-    public ?string $Postbox = null;
-
-    /**
-     * İç kapı numarası girilecektir.
-     */
-    public ?string $Room = null;
-
-    /**
-     * Meydan/bulvar/cadde/sokak/küme evler/site adı bilgileri girilecektir.
-     */
-    public ?string $StreetName = null;
-
-    /**
-     * Blok adı girilebilecektir.
-     */
-    public ?string $BlockName = null;
-
-    /**
-     * Bina girilebilecektir.
-     */
-    public ?string $BuildingName = null;
-
-    /**
-     * Bina veya bloğa ait dış kapı numarası girilecektir.
-     */
-    public ?string $BuildingNumber = null;
-
-    /**
-     * İlçe/semt adı bilgileri girilecektir.
-     */
-    public ?string $CitySubdivisionName = null;
-
-    /**
-     * İl adı girilecektir.
-     */
-    public ?string $CityName = null;
-
-    /**
-     * Posta kod numarası girilecektir.
-     */
-    public ?string $PostalZone = null;
-
-    /**
-     * Kasaba/köy/mezra/mevkii bilgileri girilecektir.
-     */
-    public ?string $Region = null;
-
-    /**
-     * Mahalle adı girilecektir.
-     */
-    public ?string $District = null;
-
-    /**
-     * Ülke
-     */
-    public ?Country $Country = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $Postbox = null,
+        public ?string $Room = null,
+        public ?string $StreetName = null,
+        public ?string $BlockName = null,
+        public ?string $BuildingName = null,
+        public ?string $BuildingNumber = null,
+        public ?string $CitySubdivisionName = null,
+        public ?string $CityName = null,
+        public ?string $PostalZone = null,
+        public ?string $Region = null,
+        public ?string $District = null,
+        public ?Country $Country = null
+    ) {}
 }

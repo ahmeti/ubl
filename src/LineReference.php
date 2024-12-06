@@ -8,17 +8,13 @@ namespace Ahmeti\Ubl;
 class LineReference
 {
     /**
-     * Kalem Numarası. Kalemin sıra numarası girilecektir.
+     * @param  string|null  $LineID  Kalem Numarası. Kalemin sıra numarası girilecektir.
+     * @param  string|null  $LineStatusCode  Kalemin durum bilgisi girilebilecektir.
+     * @param  DocumentReference|null  $DocumentReference  Referans Belge
      */
-    public ?string $LineID = null;
-
-    /**
-     * Kalemin durum bilgisi girilebilecektir.
-     */
-    public ?string $LineStatusCode = null;
-
-    /**
-     * Referans Belge
-     */
-    public ?DocumentReference $DocumentReference = null;
+    public function __construct(
+        public ?string $LineID = null,
+        public ?string $LineStatusCode = null,
+        public ?DocumentReference $DocumentReference = null
+    ) {}
 }

@@ -8,22 +8,15 @@ namespace Ahmeti\Ubl;
 class CorporateRegistrationScheme
 {
     /**
-     * Kayıt yeri numarası girilebilir.
+     * @param  string|null  $ID  Kayıt yeri numarası girilebilir.
+     * @param  string|null  $Name  Kayıt yeri ismi girilebilir.
+     * @param  string|null  $CorporateRegistrationTypeCode  Kayıt yeri tipi girilebilir
+     * @param  JurisdictionRegionAddress|null  $JuridictionRegionAddress  Kayıt yeri adresi girilebilir.
      */
-    public ?string $ID = null;
-
-    /**
-     * Kayıt yeri ismi girilebilir.
-     */
-    public ?string $Name = null;
-
-    /**
-     * Kayıt yeri tipi girilebilir
-     */
-    public ?string $CorporateRegistrationTypeCode = null;
-
-    /**
-     * Kayıt yeri adresi girilebilir.
-     */
-    public ?JurisdictionRegionAddress $JuridictionRegionAddress = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $Name = null,
+        public ?string $CorporateRegistrationTypeCode = null,
+        public ?JurisdictionRegionAddress $JuridictionRegionAddress = null
+    ) {}
 }

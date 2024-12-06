@@ -4,5 +4,7 @@ namespace Ahmeti\Ubl;
 
 class DespatchContact
 {
-    public ?string $Name = null;
+    public function __construct(
+        public ?string $Name = null
+    ) {}
 }

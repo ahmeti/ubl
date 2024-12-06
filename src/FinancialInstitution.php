@@ -8,7 +8,9 @@ namespace Ahmeti\Ubl;
 class FinancialInstitution
 {
     /**
-     * Banka ismi girilebilir.
+     * @param  string|null  $Name  Banka ismi girilebilir.
      */
-    public ?string $Name = null;
+    public function __construct(
+        public ?string $Name = null
+    ) {}
 }

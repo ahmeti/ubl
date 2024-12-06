@@ -8,44 +8,23 @@ namespace Ahmeti\Ubl;
 class MaritimeTransport
 {
     /**
-     * Geminin varsa IMO ve MMSI numarası girilir.
+     * @param  string|null  $VesselID  Geminin varsa IMO ve MMSI numarası girilir.
+     * @param  string|null  $VesselName  Geminin adı girilir.
+     * @param  string|null  $RadioCallSignID  Geminin radyo çağrı adı girilir.
+     * @param  string|null  $ShipsRequirements  Geminin ihtiyaçları bu elemana girilir.
+     * @param  array|null  $GrossTonnageMeasure  Geminin brüt ağırlığı girilir. (attrs)
+     * @param  array|null  $NetTonnageMeasure  Geminin net ağırlığı girilir. (attrs)
+     * @param  RegistryCertificateDocumentReference|null  $RegistryCertificateDocumentReference  Geminin kayıt dokümanı referansı girilir.
+     * @param  RegistryPortLocation|null  $RegistryPortLocation  Geminin kayıt limanı bilgisi girilir.
      */
-    public ?string $VesselID = null;
-
-    /**
-     * Geminin adı girilir.
-     */
-    public ?string $VesselName;
-
-    /**
-     * Geminin radyo çağrı adı girilir.
-     */
-    public ?string $RadioCallSignID;
-
-    /**
-     * Geminin ihtiyaçları bu elemana girilir.
-     */
-    public ?string $ShipsRequirements;
-
-    /**
-     * Geminin brüt ağırlığı girilir.
-     * (attrs)
-     */
-    public ?array $GrossTonnageMeasure = null;
-
-    /**
-     * Geminin net ağırlığı girilir.
-     * (attrs)
-     */
-    public ?array $NetTonnageMeasure = null;
-
-    /**
-     * Geminin kayıt dokümanı referansı girilir.
-     */
-    public ?RegistryCertificateDocumentReference $RegistryCertificateDocumentReference = null;
-
-    /**
-     * Geminin kayıt limanı bilgisi girilir.
-     */
-    public ?RegistryPortLocation $RegistryPortLocation = null;
+    public function __construct(
+        public ?string $VesselID,
+        public ?string $VesselName,
+        public ?string $RadioCallSignID,
+        public ?string $ShipsRequirements,
+        public ?array $GrossTonnageMeasure = null,
+        public ?array $NetTonnageMeasure = null,
+        public ?RegistryCertificateDocumentReference $RegistryCertificateDocumentReference = null,
+        public ?RegistryPortLocation $RegistryPortLocation = null
+    ) {}
 }

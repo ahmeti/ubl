@@ -8,17 +8,13 @@ namespace Ahmeti\Ubl;
 class Stowage
 {
     /**
-     * İstif yeri mekan numarası girilir.
+     * @param  string|null  $LocationID  İstif yeri mekan numarası girilir.
+     * @param  Location|null  $Location  Mekan bilgisi detaylı olarak girilir.
+     * @param  MeasurementDimension|null  $MeasurementDimension  İstif yeri ölçüleri girilir.
      */
-    public ?string $LocationID = null;
-
-    /**
-     * Mekan bilgisi detaylı olarak girilir.
-     */
-    public ?Location $Location = null;
-
-    /**
-     * İstif yeri ölçüleri girilir.
-     */
-    public ?MeasurementDimension $MeasurementDimension = null;
+    public function __construct(
+        public ?string $LocationID = null,
+        public ?Location $Location = null,
+        public ?MeasurementDimension $MeasurementDimension = null
+    ) {}
 }

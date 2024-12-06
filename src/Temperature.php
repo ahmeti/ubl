@@ -8,18 +8,13 @@ namespace Ahmeti\Ubl;
 class Temperature
 {
     /**
-     * Sıcaklık nitelik numarası girilir.
+     * @param  string|null  $AttributeID  Sıcaklık nitelik numarası girilir.
+     * @param  array|null  $Measure  Ölçüm girilir. (unitCode="CEL")
+     * @param  string|null  $Description  Açıklama girilir
      */
-    public ?string $AttributeID = null;
-
-    /**
-     * Ölçüm girilir.
-     * (unitCode="CEL")
-     */
-    public ?array $Measure = null;
-
-    /**
-     * Açıklama girilir
-     */
-    public ?string $Description = null;
+    public function __construct(
+        public ?string $AttributeID = null,
+        public ?array $Measure = null,
+        public ?string $Description = null
+    ) {}
 }

@@ -8,18 +8,13 @@ namespace Ahmeti\Ubl;
 class DocumentResponse
 {
     /**
-     * Yanıt
+     * @param  Response|null  $Response  Yanıt
+     * @param  DocumentReference|null  $DocumentReference  Yanıt verilen belgeye referans bilgisi içermektedir.
+     * @param  LineResponse|null  $LineResponse  Satıra yanıt bilgilerini içerir. Dokümanın belli bir kalemi ile ilgili red ve düzeltme talebi olma durumunda cbc:LineID elemanı ilgili kalem numarasını içerecektir.
      */
-    public ?Response $Response = null;
-
-    /**
-     * Yanıt verilen belgeye referans bilgisi içermektedir.
-     */
-    public ?DocumentReference $DocumentReference = null;
-
-    /**
-     * Satıra yanıt bilgilerini içerir. Dokümanın belli bir kalemi ile ilgili red ve düzeltme talebi olma durumunda
-     * cbc:LineID elemanı ilgili kalem numarasını içerecektir.
-     */
-    public ?LineResponse $LineResponse = null;
+    public function __construct(
+        public ?Response $Response = null,
+        public ?DocumentReference $DocumentReference = null,
+        public ?LineResponse $LineResponse = null
+    ) {}
 }

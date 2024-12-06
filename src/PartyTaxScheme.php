@@ -8,17 +8,13 @@ namespace Ahmeti\Ubl;
 class PartyTaxScheme
 {
     /**
-     * İhracat faturasında ilgili ülkedeki kurumun resmi ünvanı yazılır.
+     * @param  string|null  $RegistrationName  İhracat faturasında ilgili ülkedeki kurumun resmi ünvanı yazılır.
+     * @param  string|null  $CompanyID  İhracat faturasında ilgili ülkedeki kurumun vergi kayıt kodu yazılır.
+     * @param  TaxScheme|null  $TaxScheme  Vergi Dairesi adı
      */
-    public ?string $RegistrationName = null;
-
-    /**
-     * İhracat faturasında ilgili ülkedeki kurumun vergi kayıt kodu yazılır.
-     */
-    public ?string $CompanyID = null;
-
-    /**
-     * Vergi Dairesi adı
-     */
-    public ?TaxScheme $TaxScheme = null;
+    public function __construct(
+        public ?string $RegistrationName = null,
+        public ?string $CompanyID = null,
+        public ?TaxScheme $TaxScheme = null
+    ) {}
 }

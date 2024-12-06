@@ -4,7 +4,8 @@ namespace Ahmeti\Ubl;
 
 class InvoicePeriod
 {
-    public ?string $StartDate = null;
-
-    public ?string $EndDate = null;
+    public function __construct(
+        public ?string $StartDate = null,
+        public ?string $EndDate = null
+    ) {}
 }

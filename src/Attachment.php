@@ -8,14 +8,11 @@ namespace Ahmeti\Ubl;
 class Attachment
 {
     /**
-     * İlişkilendirilmek istenen dokümanın URI formatında referansını tutar.
-     * Eğer Attachment elemanı, bir “DigitalSignatureAttachment” ise (diğer bir deyişle Signature Elemanının içerisine yeralıyorsa)
-     * External Reference zorunlu bir elemandır.
+     * @param  ExternalReference|null  $ExternalReference  İlişkilendirilmek istenen dokümanın URI formatında referansını tutar. Eğer Attachment elemanı, bir “DigitalSignatureAttachment” ise (diğer bir deyişle Signature Elemanının içerisine yeralıyorsa) External Reference zorunlu bir elemandır.
+     * @param  EmbeddedDocumentBinaryObject|null  $EmbeddedDocumentBinaryObject  İlişiklendirilmiş dokümanı base64Encoded formatında tutar.
      */
-    public ?ExternalReference $ExternalReference = null;
-
-    /**
-     * İlişiklendirilmiş dokümanı base64Encoded formatında tutar.
-     */
-    public ?EmbeddedDocumentBinaryObject $EmbeddedDocumentBinaryObject = null;
+    public function __construct(
+        public ?ExternalReference $ExternalReference = null,
+        public ?EmbeddedDocumentBinaryObject $EmbeddedDocumentBinaryObject = null
+    ) {}
 }

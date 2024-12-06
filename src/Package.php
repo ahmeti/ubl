@@ -8,47 +8,25 @@ namespace Ahmeti\Ubl;
 class Package
 {
     /**
-     * Paket numarası girilir.
+     * @param  string|null  $ID  Paket numarası girilir.
+     * @param  string|null  $Quantity  Paket adedi girilir.
+     * @param  bool|null  $ReturnableMaterialIndicator  Paket materyali geri dönüşümlü olup olmadığını belirtir.
+     * @param  string|null  $PackageLevelCode  Paketleme seviyesini belirtir.
+     * @param  string|null  $PackagingTypeCode  Paketleme tipini belirtir.
+     * @param  string|null  $PackagingMaterial  Paketleme materyalini belirtir.
+     * @param  ContainedPackage|null  $ContainedPackage  İçerdiği diğer paketler girilir.
+     * @param  GoodsItem|null  $GoodsItem  İçerdiği ürünler girilir.
+     * @param  MeasurementDimension|null  $MeasurementDimension  Paketin ölçüleri girilir.
      */
-    public ?string $ID = null;
-
-    /**
-     * Paket adedi girilir.
-     */
-    public ?string $Quantity = null;
-
-    /**
-     * Paket materyali geri dönüşümlü olup olmadığını belirtir.
-     */
-    public ?bool $ReturnableMaterialIndicator = null;
-
-    /**
-     * Paketleme seviyesini belirtir.
-     */
-    public ?string $PackageLevelCode = null;
-
-    /**
-     * Paketleme tipini belirtir.
-     */
-    public ?string $PackagingTypeCode = null;
-
-    /**
-     * Paketleme materyalini belirtir.
-     */
-    public ?string $PackagingMaterial = null;
-
-    /**
-     * İçerdiği diğer paketler girilir.
-     */
-    public ?ContainedPackage $ContainedPackage = null;
-
-    /**
-     * İçerdiği ürünler girilir.
-     */
-    public ?GoodsItem $GoodsItem = null;
-
-    /**
-     * Paket boyutları girilir.
-     */
-    public ?MeasurementDimension $MeasurementDimension = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $Quantity = null,
+        public ?bool $ReturnableMaterialIndicator = null,
+        public ?string $PackageLevelCode = null,
+        public ?string $PackagingTypeCode = null,
+        public ?string $PackagingMaterial = null,
+        public ?ContainedPackage $ContainedPackage = null,
+        public ?GoodsItem $GoodsItem = null,
+        public ?MeasurementDimension $MeasurementDimension = null
+    ) {}
 }

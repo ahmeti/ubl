@@ -8,67 +8,34 @@ namespace Ahmeti\Ubl;
 class TransportMeans
 {
     /**
-     * Seyahat/Sefer numarası girilir.
+     * @param  string|null  $JourneyID  Seyahat/Sefer numarası girilir.
+     * @param  string|null  $RegistrationNationalityID  Kayıtlı olduğu ülke kodlu olarak girilir.
+     * @param  string|null  $RegistrationNationality  Kayıtlı olduğu ülke serbest metin olarak girilir.
+     * @param  string|null  $DirectionCode  Yön bilgisi kodlu olarak girilir.
+     * @param  string|null  $TransportMeansTypeCode  Taşıma şekli kodlu olarak girilir.
+     * @param  string|null  $TradeServiceCode  Ticaret servisi kodlu olarak girilir.
+     * @param  Stowage|null  $Stowage  İstifleme bilgisi kodlu olarak girilir.
+     * @param  AirTransport|null  $AirTransport  Hava taşımacılığı bilgisi girilir.
+     * @param  RoadTransport|null  $RoadTransport  Karayolu taşımacılığı bilgisi girilir.
+     * @param  RailTransport|null  $RailTransport  Demiryolu taşımacılığı bilgisi girilir.
+     * @param  MaritimeTransport|null  $MaritimeTransport  Deniz taşımacılığı bilgisi girilir.
+     * @param  OwnerParty|null  $OwnerParty  Bu araca sahip olan taraf bilgisi girilir.
+     * @param  MeasurementDimension|null  $MeasurementDimension  Ölçüm bilgileri girilir.
      */
-    public ?string $JourneyID = null;
+    public function __construct(
+        public ?string $JourneyID = null,
+        public ?string $RegistrationNationalityID = null,
+        public ?string $RegistrationNationality = null,
+        public ?string $DirectionCode = null,
+        public ?string $TransportMeansTypeCode = null,
+        public ?string $TradeServiceCode = null,
+        public ?Stowage $Stowage = null,
+        public ?AirTransport $AirTransport = null,
+        public ?RoadTransport $RoadTransport = null,
+        public ?RailTransport $RailTransport = null,
+        public ?MaritimeTransport $MaritimeTransport = null,
+        public ?OwnerParty $OwnerParty = null,
+        public ?MeasurementDimension $MeasurementDimension = null
 
-    /**
-     * Kayıtlı olduğu ülke kodlu olarak girilir.
-     */
-    public ?string $RegistrationNationalityID = null;
-
-    /**
-     * Kayıtlı olduğu ülke serbest metin olarak girilir.
-     */
-    public ?string $RegistrationNationality = null;
-
-    /**
-     * Yön bilgisi kodlu olarak girilir.
-     */
-    public ?string $DirectionCode = null;
-
-    /**
-     * Taşıma şekli kodlu olarak girilir.
-     */
-    public ?string $TransportMeansTypeCode = null;
-
-    /**
-     * Ticaret servisi kodlu olarak girilir.
-     */
-    public ?string $TradeServiceCode = null;
-
-    /**
-     * İstifleme bilgisi kodlu olarak girilir.
-     */
-    public ?Stowage $Stowage = null;
-
-    /**
-     * Hava taşımacılığı bilgisi girilir.
-     */
-    public ?AirTransport $AirTransport = null;
-
-    /**
-     * Karayolu taşımacılığı bilgisi girilir.
-     */
-    public ?RoadTransport $RoadTransport = null;
-
-    /**
-     * Demiryolu taşımacılığı bilgisi girilir.
-     */
-    public ?RailTransport $RailTransport = null;
-
-    /**
-     * Deniz taşımacılığı bilgisi girilir.
-     */
-    public ?MaritimeTransport $MaritimeTransport = null;
-
-    /**
-     * Bu araca sahip olan taraf bilgisi girilir.
-     */
-    public ?OwnerParty $OwnerParty = null;
-
-    /**
-     * Ölçüm bilgileri girilir.
-     */
-    public ?MeasurementDimension $MeasurementDimension = null;
+    ) {}
 }

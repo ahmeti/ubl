@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class SupplierParty
 {
     /**
-     * Satıcı tarafı tanımlar
+     * @param  Party|null  $Party  Satıcı tarafı tanımlar
+     * @param  DespatchContact|null  $DespatchContact  DespatchSupplierParty elemanı altında kullanılması durumunda teslim eden bilgisi girilir.
      */
-    public ?Party $Party = null;
-
-    /**
-     * DespatchSupplierParty elemanı altında kullanılması durumunda teslim eden bilgisi girilir.
-     */
-    public ?DespatchContact $DespatchContact = null;
+    public function __construct(
+        public ?Party $Party = null,
+        public ?DespatchContact $DespatchContact = null
+    ) {}
 }

@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class CustomsDeclaration
 {
     /**
-     * Ürünün ilgili gümrük numarası girilir
+     * @param  string|null  $ID  Ürünün ilgili gümrük numarası girilir
+     * @param  IssuerParty|null  $IssuerParty  Numaralandırmayı yapan kurum bilgisi girilir
      */
-    public ?string $ID = null;
-
-    /**
-     * Numaralandırmayı yapan kurum bilgisi girilir
-     */
-    public ?IssuerParty $IssuerParty = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?IssuerParty $IssuerParty = null
+    ) {}
 }

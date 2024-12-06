@@ -8,17 +8,13 @@ namespace Ahmeti\Ubl;
 class BillingReferenceLine
 {
     /**
-     * Kalem numarası girilir.
+     * @param  string|null  $ID  Kalem numarası girilir.
+     * @param  string|null  $Amount  Kalemin tutarı girilir
+     * @param  AllowanceCharge|null  $AllowanceCharge  Kaleme eğer indirim veya fiyat artırımı uygulanmışsa girilir.
      */
-    public ?string $ID = null;
-
-    /**
-     * Kalemin tutarı girilir
-     */
-    public ?string $Amount = null;
-
-    /**
-     * Kaleme eğer indirim veya fiyat artırımı uygulanmışsa girilir.
-     */
-    public ?AllowanceCharge $AllowanceCharge = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $Amount = null,
+        public ?AllowanceCharge $AllowanceCharge = null
+    ) {}
 }

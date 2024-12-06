@@ -8,7 +8,9 @@ namespace Ahmeti\Ubl;
 class ExternalReference
 {
     /**
-     * Dökümanın URI adresi.
+     * @param  string|null  $URI  Dökümanın URI adresi.
      */
-    public ?string $URI = null;
+    public function __construct(
+        public ?string $URI = null
+    ) {}
 }

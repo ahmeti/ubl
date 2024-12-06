@@ -8,32 +8,19 @@ namespace Ahmeti\Ubl;
 class PaymentMeans
 {
     /**
-     * Ödeme şeklinin kodu girilir. Bu eleman için UN/EDIFACT 4461 Ödeme Çeşitleri Kod Listesi kullanılacaktır.
+     * @param  string|null  $PaymentMeansCode  Ödeme şeklinin kodu girilir. Bu eleman için UN/EDIFACT 4461 Ödeme Çeşitleri Kod Listesi kullanılacaktır.
+     * @param  string|null  $PaymentDueDate  Son ödeme günü yıl-ay-gün formatında girilir.
+     * @param  string|null  $PaymentChannelCode  Ödeme kanalı kodu girilir.
+     * @param  string|null  $InstructionNote  Ödeme ile ilgili açıklamalar serbest metin olarak girilir.
+     * @param  PayerFinancialAccount|null  $PayerFinancialAccount  Ödeme yapan tarafın hesap bilgileri girilir.
+     * @param  PayeeFinancialAccount|null  $PayeeFinancialAccount  Ödeme yapılacak hesap girilir.
      */
-    public ?string $PaymentMeansCode = null;
-
-    /**
-     * Son ödeme günü yıl-ay-gün formatında girilir.
-     */
-    public ?string $PaymentDueDate = null;
-
-    /**
-     * Ödeme kanalı kodu girilir.
-     */
-    public ?string $PaymentChannelCode = null;
-
-    /**
-     * Ödeme ile ilgili açıklamalar serbest metin olarak girilir.
-     */
-    public ?string $InstructionNote = null;
-
-    /**
-     * Ödeme yapan tarafın hesap bilgileri girilir.
-     */
-    public ?PayerFinancialAccount $PayerFinancialAccount = null;
-
-    /**
-     * Ödeme yapılacak hesap girilir.
-     */
-    public ?PayeeFinancialAccount $PayeeFinancialAccount = null;
+    public function __construct(
+        public ?string $PaymentMeansCode = null,
+        public ?string $PaymentDueDate = null,
+        public ?string $PaymentChannelCode = null,
+        public ?string $InstructionNote = null,
+        public ?PayerFinancialAccount $PayerFinancialAccount = null,
+        public ?PayeeFinancialAccount $PayeeFinancialAccount = null
+    ) {}
 }

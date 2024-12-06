@@ -4,7 +4,8 @@ namespace Ahmeti\Ubl;
 
 class DespatchDocumentReference
 {
-    public ?string $ID = null;
-
-    public ?string $IssueDate = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $IssueDate = null
+    ) {}
 }

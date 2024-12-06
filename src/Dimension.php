@@ -8,30 +8,17 @@ namespace Ahmeti\Ubl;
 class Dimension
 {
     /**
-     * Hangi özelliğin ölçüldüğü girilir.
+     * @param  string|null  $AttributeID  Hangi özelliğin ölçüldüğü girilir.
+     * @param  array|null  $Measure  Ölçüm girilir. (attrs = unitCode="MTR")
+     * @param  string|null  $Description  Açıklama girilir.
+     * @param  array|null  $MinimumMeasure  Minimum ölçüm girilir. (attrs = unitCode="MTR")
+     * @param  array|null  $MaximumMeasure  Maximum ölçüm girilir. (attrs = unitCode="MTR")
      */
-    public ?string $AttributeID = null;
-
-    /**
-     * Ölçüm girilir.
-     * (attrs = unitCode="MTR")
-     */
-    public ?array $Measure = null;
-
-    /**
-     * Açıklama girilir.
-     */
-    public ?string $Description = null;
-
-    /**
-     * Minimum ölçüm girilir.
-     * (attrs = unitCode="MTR")
-     */
-    public ?array $MinimumMeasure = null;
-
-    /**
-     * Maximum ölçüm girilir.
-     * (attrs = unitCode="MTR")
-     */
-    public ?array $MaximumMeasure = null;
+    public function __construct(
+        public ?string $AttributeID = null,
+        public ?array $Measure = null,
+        public ?string $Description = null,
+        public ?array $MinimumMeasure = null,
+        public ?array $MaximumMeasure = null
+    ) {}
 }

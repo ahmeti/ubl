@@ -8,27 +8,17 @@ namespace Ahmeti\Ubl;
 class OrderLineReference
 {
     /**
-     * Kalem numarası girilir.
+     * @param  string|null  $LineID  Kalem numarası girilir.
+     * @param  string|null  $SalesOrderLineID  Alıcının verdiği kalem numarası verilir.
+     * @param  string|null  $UUID  Sipariş Kaleminin tekil numarası girilir.
+     * @param  string|null  $LineStatusCode  Kalemin durumu girilir.
+     * @param  OrderReference|null  $OrderReference  İlgili sipariş belgesine referans verilir.
      */
-    public ?string $LineID = null;
-
-    /**
-     * Alıcının verdiği kalem numarası verilir.
-     */
-    public ?string $SalesOrderLineID = null;
-
-    /**
-     * Sipariş Kaleminin tekil numarası girilir.
-     */
-    public ?string $UUID = null;
-
-    /**
-     * Kalemin durumu girilir.
-     */
-    public ?string $LineStatusCode = null;
-
-    /**
-     * İlgili sipariş belgesine referans verilir.
-     */
-    public ?OrderReference $OrderReference = null;
+    public function __construct(
+        public ?string $LineID = null,
+        public ?string $SalesOrderLineID = null,
+        public ?string $UUID = null,
+        public ?string $LineStatusCode = null,
+        public ?OrderReference $OrderReference = null
+    ) {}
 }

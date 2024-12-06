@@ -2,7 +2,9 @@
 
 namespace Ahmeti\Ubl;
 
+use Ahmeti\Ubl\Utils\UblCustomAttr;
+
 /**
- * Ağurlık ve hacim bilgileri
+ * Ağırlık ve hacim bilgileri
  */
 class Measure extends UblCustomAttr {}

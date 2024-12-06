@@ -8,27 +8,17 @@ namespace Ahmeti\Ubl;
 class OrderReference
 {
     /**
-     * Sipariş numarası girilecektir.
+     * @param  string|null  $ID  Sipariş numarası girilir.
+     * @param  string|null  $SalesOrderID  Satıcının verdiği sipariş numarası girilir.
+     * @param  string|null  $IssueDate  Sipariş tarihi girilir.
+     * @param  string|null  $OrderTypeCode  Sipariş tipi girilir.
+     * @param  DocumentReference|null  $DocumentReference  Ek dökümanlar
      */
-    public ?string $ID = null;
-
-    /**
-     * Satıcının verdiği sipariş numarası girilecektir.
-     */
-    public ?string $SalesOrderID = null;
-
-    /**
-     * Sipariş tarihi girilecektir.
-     */
-    public ?string $IssueDate = null;
-
-    /**
-     * Sipariş tipi girilecektir.
-     */
-    public ?string $OrderTypeCode = null;
-
-    /**
-     * Ek dökümanlar
-     */
-    public ?DocumentReference $DocumentReference = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $SalesOrderID = null,
+        public ?string $IssueDate = null,
+        public ?string $OrderTypeCode = null,
+        public ?DocumentReference $DocumentReference = null
+    ) {}
 }

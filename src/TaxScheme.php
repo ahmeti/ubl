@@ -9,17 +9,13 @@ namespace Ahmeti\Ubl;
 class TaxScheme
 {
     /**
-     * Vergilendirme şemasının ID bilgisi girilir.
+     * @param  string|null  $ID  Vergilendirme şemasının ID bilgisi girilir.
+     * @param  string|null  $Name  Bu eleman “Party” elemanı içerisinde kullanıldığında vergi dairesi adını içermektedir.
+     * @param  string|null  $TaxTypeCode  Vergi Tipi Kodu girilecektir.
      */
-    public ?string $ID = null;
-
-    /**
-     * Bu eleman “Party” elemanı içerisinde kullanıldığında vergi dairesi adını içermektedir.
-     */
-    public ?string $Name = null;
-
-    /**
-     * Vergi Tipi Kodu girilecektir.
-     */
-    public ?string $TaxTypeCode = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $Name = null,
+        public ?string $TaxTypeCode = null
+    ) {}
 }

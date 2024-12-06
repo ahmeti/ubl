@@ -8,7 +8,9 @@ namespace Ahmeti\Ubl;
 class RoadTransport
 {
     /**
-     *  Plaka numarası girilir.
+     * @param  string|null  $LicensePlateID  Plaka numarası girilir.
      */
-    public ?string $LicensePlateID = null;
+    public function __construct(
+        public ?string $LicensePlateID = null
+    ) {}
 }

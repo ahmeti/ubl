@@ -8,22 +8,15 @@ namespace Ahmeti\Ubl;
 class FinancialAccount
 {
     /**
-     * Hesap numarası metin olarak girilir.
+     * @param  string|null  $ID  Hesap numarası metin olarak girilir.
+     * @param  string|null  $CurrencyCode  Hesabın para birimi kodu girilir.
+     * @param  string|null  $PaymentNote  Ödeme ile ilgili açıklama serbest metin olarak girilir.
+     * @param  FinancialInstitutionBranch|null  $FinancialInstitutionBranch  Hesabın bulunduğu banka ve şube bilgileri girilebilir.
      */
-    public ?string $ID = null;
-
-    /**
-     * Hesabın para birimi kodu girilir.
-     */
-    public ?string $CurrencyCode = null;
-
-    /**
-     * Ödeme ile ilgili açıklama serbest metin olarak girilir.
-     */
-    public ?string $PaymentNote = null;
-
-    /**
-     * Hesabın bulunduğu banka ve şube bilgileri girilebilir.
-     */
-    public ?FinancialInstitutionBranch $FinancialInstitutionBranch = null;
+    public function __construct(
+        public ?string $ID = null,
+        public ?string $CurrencyCode = null,
+        public ?string $PaymentNote = null,
+        public ?FinancialInstitutionBranch $FinancialInstitutionBranch = null
+    ) {}
 }

@@ -8,7 +8,9 @@ namespace Ahmeti\Ubl;
 class Price
 {
     /**
-     * (val = string, attrs = [currencyID="TRY"])
+     * @param  array|null  $PriceAmount  (val = string, attrs = [currencyID="TRY"])
      */
-    public ?array $PriceAmount = null;
+    public function __construct(
+        public ?array $PriceAmount = null
+    ) {}
 }

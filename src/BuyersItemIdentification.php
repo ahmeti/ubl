@@ -7,5 +7,7 @@ namespace Ahmeti\Ubl;
  */
 class BuyersItemIdentification extends ItemIdentification
 {
-    public ?string $ID = null;
+    public function __construct(
+        public ?string $ID = null
+    ) {}
 }

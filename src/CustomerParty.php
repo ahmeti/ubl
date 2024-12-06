@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class CustomerParty
 {
     /**
-     * Alıcı tarafın bilgilerini tutan elemandır.
+     * @param  Party|null  $Party  Alıcı tarafın bilgilerini tutan elemandır.
+     * @param  DeliveryContact|null  $DeliveryContact  ReceiptAdvice içerisinde kullanımında teslim alan bilgisi girilebilir.
      */
-    public ?Party $Party = null;
-
-    /**
-     * ReceiptAdvice içerisinde kullanımında teslim alan bilgisi girilebilir.
-     */
-    public ?DeliveryContact $DeliveryContact = null;
+    public function __construct(
+        public ?Party $Party,
+        public ?DeliveryContact $DeliveryContact = null
+    ) {}
 }

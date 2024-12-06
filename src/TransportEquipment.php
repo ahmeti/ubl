@@ -8,18 +8,13 @@ namespace Ahmeti\Ubl;
 class TransportEquipment
 {
     /**
-     * Tekil numarası girilir. Örneğin Dorse Plaka numarası.
-     * (val = string, attrs = [schemeID="DORSEPLAKA"])
+     * @param  array|null  $ID  Tekil numarası girilir. Örneğin Dorse Plaka numarası. (val = string, attrs = [schemeID="DORSEPLAKA"])
+     * @param  string|null  $TransportEquipmentTypeCode  Ekipman tipi kodu girilir.
+     * @param  string|null  $Description  Serbest metin açıklama girilir.
      */
-    public ?array $ID = null;
-
-    /**
-     * Ekipman tipi kodu girilir.
-     */
-    public ?string $TransportEquipmentTypeCode = null;
-
-    /**
-     * Serbest metin açıklama girilir.
-     */
-    public ?string $Description = null;
+    public function __construct(
+        public ?array $ID = null,
+        public ?string $TransportEquipmentTypeCode = null,
+        public ?string $Description = null
+    ) {}
 }

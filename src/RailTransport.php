@@ -8,12 +8,11 @@ namespace Ahmeti\Ubl;
 class RailTransport
 {
     /**
-     * Tren numarası girilir.
+     * @param  string|null  $TrainID  Tren numarası girilir.
+     * @param  string|null  $RailCarID  Vagon numarası girilir.
      */
-    public ?string $TrainID = null;
-
-    /**
-     * Vagon numarası girilir.
-     */
-    public ?string $RailCarID = null;
+    public function __construct(
+        public ?string $TrainID = null,
+        public ?string $RailCarID = null
+    ) {}
 }

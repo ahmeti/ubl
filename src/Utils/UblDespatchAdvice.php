@@ -1,8 +1,8 @@
 <?php
 
-namespace Ahmeti\Ubl;
+namespace Ahmeti\Ubl\Utils;
 
-class UblDespatchAdviceHelper extends UblHelper
+class UblDespatchAdvice extends UblHelper
 {
     public function getXML(): string
     {

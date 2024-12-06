@@ -8,17 +8,13 @@ namespace Ahmeti\Ubl;
 class Response
 {
     /**
-     * Response elemanını tekil olarak tanımlayan numaradır.
+     * @param  string|null  $ReferenceID  Response elemanını tekil olarak tanımlayan numaradır.
+     * @param  string|null  $ResponseCode  YanıtKodu
+     * @param  string|null  $Description  Tanımlama. Yanıt ile ilgili açıklamalar bu elemana serbest metin olarak yazılabilecektir.
      */
-    public ?string $ReferenceID = null;
-
-    /**
-     * YanıtKodu
-     */
-    public ?string $ResponseCode = null;
-
-    /**
-     * Tanımlama. Yanıt ile ilgili açıklamalar bu elemana serbest metin olarak yazılabilecektir.
-     */
-    public ?string $Description = null;
+    public function __construct(
+        public ?string $ReferenceID = null,
+        public ?string $ResponseCode = null,
+        public ?string $Description = null
+    ) {}
 }
