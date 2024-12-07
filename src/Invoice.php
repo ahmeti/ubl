@@ -5,25 +5,26 @@ namespace Ahmeti\Ubl;
 class Invoice
 {
     /**
-     * @param  InvoiceLine[]|null  $InvoiceLine  Fatura kalemleri girilir.
+     * @param  DocumentReference[]  $AdditionalDocumentReference  Referans dokümanlar girilir.
+     * @param  InvoiceLine[]  $InvoiceLine  Fatura kalemleri girilir.
      */
     public function __construct(
         public ?string $UBLVersionID = null,
         public ?string $CustomizationID = null,
         public ?string $ProfileID = null,
         public ?string $ID = null,
-        public ?string $CopyIndicator = null,
+        public ?bool $CopyIndicator = null,
         public ?string $UUID = null,
         public ?string $IssueDate = null,
         public ?string $IssueTime = null,
         public ?string $InvoiceTypeCode = null,
         public ?array $Note = null,
         public ?string $DocumentCurrencyCode = null,
-        public ?string $LineCountNumeric = null,
+        public ?int $LineCountNumeric = null,
         public ?OrderReference $OrderReference = null,
         public ?DespatchDocumentReference $DespatchDocumentReference = null,
         public ?BillingReference $BillingReference = null,
-        public ?AdditionalDocumentReference $AdditionalDocumentReference = null,
+        public array $AdditionalDocumentReference = [],
         public ?Signature $Signature = null,
         public ?AccountingSupplierParty $AccountingSupplierParty = null,
         public ?AccountingCustomerParty $AccountingCustomerParty = null,
@@ -39,6 +40,6 @@ class Invoice
         public ?PaymentAlternativeExchangeRate $PaymentAlternativeExchangeRate = null,
         public ?InvoicePeriod $InvoicePeriod = null,
         public ?TaxRepresentativeParty $TaxRepresentativeParty = null,
-        public ?array $InvoiceLine = null
+        public array $InvoiceLine = []
     ) {}
 }

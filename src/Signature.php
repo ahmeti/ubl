@@ -8,12 +8,12 @@ namespace Ahmeti\Ubl;
 class Signature
 {
     /**
-     * @param  string|null  $ID  Bu alana dokumana eklenecek elektronik imza ile ilgili bir referans numarası verilecektir.
+     * @param  array  $ID  Bu alana dokumana eklenecek elektronik imza ile ilgili bir referans numarası verilecektir.
      * @param  SignatoryParty|null  $SignatoryParty  Bu alana dokumanı imzalayan imza sahibinin bilgileri eklenecektir.
      * @param  DigitalSignatureAttachment|null  $DigitalSignatureAttachment  Bu alana UBLExtensions alanına eklenen dijital imzaya referans eklenecektir.
      */
     public function __construct(
-        public ?string $ID = null,
+        public array $ID = [],
         public ?SignatoryParty $SignatoryParty = null,
         public ?DigitalSignatureAttachment $DigitalSignatureAttachment = null
     ) {}

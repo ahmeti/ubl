@@ -9,11 +9,11 @@ namespace Ahmeti\Ubl;
 class TaxTotal
 {
     /**
-     * @param  string|null  $TaxAmount  Hesaplanan vergilerin toplam tutarı girilir.
+     * @param  array  $TaxAmount  Hesaplanan vergilerin toplam tutarı girilir.
      * @param  TaxSubtotal|null  $TaxSubtotal  Vergi hesaplaması ile ilgili bilgilere yer verilir.
      */
     public function __construct(
-        public ?string $TaxAmount = null,
+        public array $TaxAmount = [],
         public ?TaxSubtotal $TaxSubtotal = null
     ) {}
 }

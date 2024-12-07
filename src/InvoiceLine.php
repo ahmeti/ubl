@@ -10,7 +10,7 @@ class InvoiceLine
     /**
      * @param  string|null  $ID  Kalem sıra numarası girilir.
      * @param  array|null  $Note  Kalem hakkında açıklama serbest metin olarak girilir.
-     * @param  string|null  $InvoicedQuantity  Mal/hizmet miktarı birimi ile birlikte girilir.
+     * @param  array  $InvoicedQuantity  Mal/hizmet miktarı birimi ile birlikte girilir.
      * @param  OrderLineReference|null  $OrderLineReference  Fatura ile ilişkili sipariş dokümanının kalemlerine referans atmak için kullanılır.
      * @param  DespatchLineReference|null  $DespatchLineReference  Fatura ile ilişkili irsaliye dokümanının kalemlerine referans atmak için kullanılır.
      * @param  ReceiptLineReference|null  $ReceiptLineReference  Fatura ile ilişkili alındı dokümanının kalemlerine referans atmak için kullanılır.
@@ -26,12 +26,12 @@ class InvoiceLine
     public function __construct(
         public ?string $ID = null,
         public ?array $Note = null,
-        public ?string $InvoicedQuantity = null,
+        public array $InvoicedQuantity = [],
         public ?OrderLineReference $OrderLineReference = null,
         public ?DespatchLineReference $DespatchLineReference = null,
         public ?ReceiptLineReference $ReceiptLineReference = null,
         public ?Delivery $Delivery = null,
-        public ?array $LineExtensionAmount = null,
+        public array $LineExtensionAmount = [],
         public ?AllowanceCharge $AllowanceCharge = null,
         public ?TaxTotal $TaxTotal = null,
         public ?WithholdingTaxTotal $WithholdingTaxTotal = null,

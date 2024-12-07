@@ -8,6 +8,6 @@ namespace Ahmeti\Ubl;
 class PartyIdentification
 {
     public function __construct(
-        public ?string $ID = null
+        public array $ID = []
     ) {}
 }
