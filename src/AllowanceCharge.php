@@ -8,7 +8,7 @@ namespace Ahmeti\Ubl;
 class AllowanceCharge
 {
     /**
-     * @param  bool|null  $ChargeIndicator  Iskonto ise “false”, artırım ise “true” girilir.
+     * @param  string  $ChargeIndicator  Iskonto ise “false”, artırım ise “true” girilir.
      * @param  string|null  $AllowanceChargeReason  Iskonto veya artırımın sebebi serbest metin olarak girilir.
      * @param  string|null  $MultiplierFactorNumeric  Iskonto veya artırım oranı numerik olarak girilir.
      * @param  int|null  $SequenceNumeric  Birden fazla iskonto veya fiyat artırımı kullanılması durumunda sıra numarası girilir.
@@ -17,7 +17,7 @@ class AllowanceCharge
      * @param  int|null  $PerUnitAmount  Ürün adetine göre iskonto veya artırımın uygulandığı durumlarda uygulanan ürün miktarını gösterir
      */
     public function __construct(
-        public ?bool $ChargeIndicator = null,
+        public string $ChargeIndicator = 'false',
         public ?string $AllowanceChargeReason = null,
         public ?string $MultiplierFactorNumeric = null,
         public ?int $SequenceNumeric = null,

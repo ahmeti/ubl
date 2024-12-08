@@ -10,10 +10,10 @@ class TaxTotal
 {
     /**
      * @param  array  $TaxAmount  Hesaplanan vergilerin toplam tutarı girilir.
-     * @param  TaxSubtotal|null  $TaxSubtotal  Vergi hesaplaması ile ilgili bilgilere yer verilir.
+     * @param  TaxSubtotal[]|null  $TaxSubtotal  Vergi hesaplaması ile ilgili bilgilere yer verilir.
      */
     public function __construct(
         public array $TaxAmount = [],
-        public ?TaxSubtotal $TaxSubtotal = null
+        public ?array $TaxSubtotal = []
     ) {}
 }

@@ -5,6 +5,7 @@ namespace Ahmeti\Ubl;
 class Invoice
 {
     /**
+     * @param  DespatchDocumentReference[]  $DespatchDocumentReference  İrsaliye bilgileri girilir.
      * @param  DocumentReference[]  $AdditionalDocumentReference  Referans dokümanlar girilir.
      * @param  InvoiceLine[]  $InvoiceLine  Fatura kalemleri girilir.
      */
@@ -13,7 +14,7 @@ class Invoice
         public ?string $CustomizationID = null,
         public ?string $ProfileID = null,
         public ?string $ID = null,
-        public ?bool $CopyIndicator = null,
+        public string $CopyIndicator = 'false',
         public ?string $UUID = null,
         public ?string $IssueDate = null,
         public ?string $IssueTime = null,
@@ -22,7 +23,7 @@ class Invoice
         public ?string $DocumentCurrencyCode = null,
         public ?int $LineCountNumeric = null,
         public ?OrderReference $OrderReference = null,
-        public ?DespatchDocumentReference $DespatchDocumentReference = null,
+        public array $DespatchDocumentReference = [],
         public ?BillingReference $BillingReference = null,
         public array $AdditionalDocumentReference = [],
         public ?Signature $Signature = null,
