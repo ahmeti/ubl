@@ -15,9 +15,11 @@ abstract class UblHelper
     protected function toXml(object $object, string &$xml): void
     {
         $data = get_object_vars($object);
-
         foreach ($data as $key => $val) {
-            if (is_object($val)) {
+            if ($val instanceof UblCustomAttr) {
+                $attrs = implode(' ', array_map(fn (string $key, mixed $value) => $key.'="'.$value.'"', array_keys($val->schemaID), $val->schemaID));
+                $xml .= '<cbc:'.$key.' '.$attrs.'>'.$val->Value.'</cbc:'.$key.'>';
+            } elseif (is_object($val)) {
                 $xml .= '<cac:'.$key.'>';
                 $this->toXml($val, $xml);
                 $xml .= '</cac:'.$key.'>';

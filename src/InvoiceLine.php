@@ -2,6 +2,8 @@
 
 namespace Ahmeti\Ubl;
 
+use Ahmeti\Ubl\Utils\UblCustomAttr;
+
 /**
  * Belgede geçen mal/hizmete ilişkin bilgilerin girildiği elemandır.
  */
@@ -10,12 +12,12 @@ class InvoiceLine
     /**
      * @param  string|null  $ID  Kalem sıra numarası girilir.
      * @param  array|null  $Note  Kalem hakkında açıklama serbest metin olarak girilir.
-     * @param  array  $InvoicedQuantity  Mal/hizmet miktarı birimi ile birlikte girilir.
+     * @param  UblCustomAttr|null  $InvoicedQuantity  Mal/hizmet miktarı birimi ile birlikte girilir.
      * @param  OrderLineReference|null  $OrderLineReference  Fatura ile ilişkili sipariş dokümanının kalemlerine referans atmak için kullanılır.
      * @param  DespatchLineReference|null  $DespatchLineReference  Fatura ile ilişkili irsaliye dokümanının kalemlerine referans atmak için kullanılır.
      * @param  ReceiptLineReference|null  $ReceiptLineReference  Fatura ile ilişkili alındı dokümanının kalemlerine referans atmak için kullanılır.
      * @param  Delivery|null  $Delivery  Kalem bazlı teslimat olması durumunda bu eleman doldurulur.
-     * @param  array|null  $LineExtensionAmount  Mal/hizmet miktarı ile Mal/hizmet birim fiyatının çarpımı ile bulunan tutardır (varsa iskonto düşülür) (val = string, attrs = [currencyID="TRY"])
+     * @param  UblCustomAttr|null  $LineExtensionAmount  Mal/hizmet miktarı ile Mal/hizmet birim fiyatının çarpımı ile bulunan tutardır (varsa iskonto düşülür) (val = string, attrs = [currencyID="TRY"])
      * @param  AllowanceCharge|null  $AllowanceCharge  Kalem bazlı ıskonto/artırım tutarıdır.
      * @param  TaxTotal|null  $TaxTotal  Kalem bazlı vergi bilgilerinin girildiği elemandır.
      * @param  WithholdingTaxTotal|null  $WithholdingTaxTotal  Kalem bazlı tevkifat uygulanması durumunda bu eleman kullanılır.
@@ -26,12 +28,12 @@ class InvoiceLine
     public function __construct(
         public ?string $ID = null,
         public ?array $Note = null,
-        public array $InvoicedQuantity = [],
+        public ?UblCustomAttr $InvoicedQuantity = null,
         public ?OrderLineReference $OrderLineReference = null,
         public ?DespatchLineReference $DespatchLineReference = null,
         public ?ReceiptLineReference $ReceiptLineReference = null,
         public ?Delivery $Delivery = null,
-        public array $LineExtensionAmount = [],
+        public ?UblCustomAttr $LineExtensionAmount = null,
         public ?AllowanceCharge $AllowanceCharge = null,
         public ?TaxTotal $TaxTotal = null,
         public ?WithholdingTaxTotal $WithholdingTaxTotal = null,

@@ -2,15 +2,17 @@
 
 namespace Ahmeti\Ubl;
 
+use Ahmeti\Ubl\Utils\UblCustomAttr;
+
 /**
  * Mal/hizmetin birim fiyatı girilir
  */
 class Price
 {
     /**
-     * @param  array|null  $PriceAmount  (val = string, attrs = [currencyID="TRY"])
+     * @param  UblCustomAttr|null  $PriceAmount  (val = string, attrs = [currencyID="TRY"])
      */
     public function __construct(
-        public ?array $PriceAmount = null
+        public ?UblCustomAttr $PriceAmount = null
     ) {}
 }
