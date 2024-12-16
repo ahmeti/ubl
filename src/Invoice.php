@@ -6,6 +6,7 @@ class Invoice
 {
     /**
      * @param  DespatchDocumentReference[]  $DespatchDocumentReference  İrsaliye bilgileri girilir.
+     * @param  BillingReference[]  $BillingReference  İade edilen fatura bilgileri girilir.
      * @param  DocumentReference[]  $AdditionalDocumentReference  Referans dokümanlar girilir.
      * @param  InvoiceLine[]  $InvoiceLine  Fatura kalemleri girilir.
      */
@@ -24,7 +25,7 @@ class Invoice
         public ?int $LineCountNumeric = null,
         public ?OrderReference $OrderReference = null,
         public array $DespatchDocumentReference = [],
-        public ?BillingReference $BillingReference = null,
+        public array $BillingReference = [],
         public array $AdditionalDocumentReference = [],
         public ?Signature $Signature = null,
         public ?AccountingSupplierParty $AccountingSupplierParty = null,
