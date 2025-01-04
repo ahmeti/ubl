@@ -34,6 +34,7 @@ class Invoice
         public ?AllowanceCharge $AllowanceCharge = null,
         public ?PricingExchangeRate $PricingExchangeRate = null,
         public ?TaxTotal $TaxTotal = null,
+        public ?WithholdingTaxTotal $WithholdingTaxTotal = null,
         public ?LegalMonetaryTotal $LegalMonetaryTotal = null,
         public ?BuyerCustomerParty $BuyerCustomerParty = null,
         public ?Delivery $Delivery = null,
