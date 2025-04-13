@@ -8,7 +8,7 @@ namespace Ahmeti\Ubl;
 class PaymentMeans
 {
     /**
-     * @param  string|null  $PaymentMeansCode  Ödeme şeklinin kodu girilir. Bu eleman için UN/EDIFACT 4461 Ödeme Çeşitleri Kod Listesi kullanılacaktır.
+     * @param  string|null  $PaymentMeansCode  Ödeme şeklinin kodu girilir. Bu eleman için UN/EDIFACT 4461 Ödeme Çeşitleri Kod Listesi kullanılacaktır. Banka hesabı için 42 kodu kullanılacaktır.
      * @param  string|null  $PaymentDueDate  Son ödeme günü yıl-ay-gün formatında girilir.
      * @param  string|null  $PaymentChannelCode  Ödeme kanalı kodu girilir.
      * @param  string|null  $InstructionNote  Ödeme ile ilgili açıklamalar serbest metin olarak girilir.
