@@ -8,6 +8,7 @@ class Invoice
      * @param  DespatchDocumentReference[]  $DespatchDocumentReference  İrsaliye bilgileri girilir.
      * @param  BillingReference[]  $BillingReference  İade edilen fatura bilgileri girilir.
      * @param  DocumentReference[]  $AdditionalDocumentReference  Referans dokümanlar girilir.
+     * @param  PaymentMeans[]  $PaymentMeans  Ödemenin yapılacağı hesap bilgileri girilir.
      * @param  InvoiceLine[]  $InvoiceLine  Fatura kalemleri girilir.
      */
     public function __construct(
@@ -30,7 +31,7 @@ class Invoice
         public ?Signature $Signature = null,
         public ?AccountingSupplierParty $AccountingSupplierParty = null,
         public ?AccountingCustomerParty $AccountingCustomerParty = null,
-        public ?PaymentMeans $PaymentMeans = null,
+        public array $PaymentMeans = [],
         public ?AllowanceCharge $AllowanceCharge = null,
         public ?PricingExchangeRate $PricingExchangeRate = null,
         public ?TaxTotal $TaxTotal = null,
