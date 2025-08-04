@@ -4,6 +4,9 @@ namespace Ahmeti\Ubl;
 
 class DespatchAdvice
 {
+    /**
+     * @param  DespatchLine[]  $DespatchLine
+     */
     public function __construct(
         public ?string $UBLVersionID = null,
         public ?string $CustomizationID = null,
@@ -14,14 +17,14 @@ class DespatchAdvice
         public ?string $IssueDate = null,
         public ?string $IssueTime = null,
         public ?string $DespatchAdviceTypeCode = null,
-        public ?int $LineCountNumeric = null,
         public ?array $Note = null,
+        public ?int $LineCountNumeric = null,
         public ?OrderReference $OrderReference = null,
         public ?AdditionalDocumentReference $AdditionalDocumentReference = null,
         public ?Signature $Signature = null,
         public ?DespatchSupplierParty $DespatchSupplierParty = null,
         public ?DeliveryCustomerParty $DeliveryCustomerParty = null,
         public ?Shipment $Shipment = null,
-        public ?array $DespatchLine = null
+        public array $DespatchLine = []
     ) {}
 }
