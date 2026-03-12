@@ -2,6 +2,8 @@
 
 namespace Ahmeti\Ubl;
 
+use Ahmeti\Ubl\Utils\UblCustomAttr;
+
 /**
  * Gönderi (Kargo) bilgileri girilir.
  */
@@ -18,7 +20,7 @@ class Shipment
      * @param  array|null  $TotalGoodsItemQuantity  Toplam mal miktarı girilir. (val = string, attrs = [unitCode="KGM"])
      * @param  array|null  $TotalTransportHandlingUnitQuantity  Toplam taşıma ünitesi miktarı girilir. (val = string, attrs = [unitCode="KGM"])
      * @param  array|null  $InsuranceValueAmount  Sigorta tutarı girilir. (val = string, attrs = [unitCode="KGM"])
-     * @param  array|null  $DeclaredCustomsValueAmount  Beyan edilen gümrük değeri tutarı girilir. (val = string, attrs = [unitCode="KGM"])
+     * @param  UblCustomAttr|null  $DeclaredCustomsValueAmount  Beyan edilen gümrük değeri tutarı girilir. new UblCustomAttr(['currencyID' => 'EUR'], 1000)
      * @param  array|null  $DeclaredForCarriageValueAmount  Beyan edilen taşıma ücreti (navlun) girilir. (val = string, attrs = [unitCode="KGM"])
      * @param  array|null  $DeclaredStatisticsValueAmount  Ürünün GTIP kıymet değeri girilir. (val = string, attrs = [unitCode="KGM"])
      * @param  array|null  $FreeOnBoardValueAmount  FOB değeri girilir. (val = string, attrs = [unitCode="KGM"])
@@ -42,7 +44,7 @@ class Shipment
         public ?array $TotalGoodsItemQuantity = null,
         public ?array $TotalTransportHandlingUnitQuantity = null,
         public ?array $InsuranceValueAmount = null,
-        public ?array $DeclaredCustomsValueAmount = null,
+        public ?UblCustomAttr $DeclaredCustomsValueAmount = null,
         public ?array $DeclaredForCarriageValueAmount = null,
         public ?array $DeclaredStatisticsValueAmount = null,
         public ?array $FreeOnBoardValueAmount = null,
