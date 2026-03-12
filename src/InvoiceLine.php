@@ -16,8 +16,8 @@ class InvoiceLine
      * @param  OrderLineReference|null  $OrderLineReference  Fatura ile ilişkili sipariş dokümanının kalemlerine referans atmak için kullanılır.
      * @param  DespatchLineReference|null  $DespatchLineReference  Fatura ile ilişkili irsaliye dokümanının kalemlerine referans atmak için kullanılır.
      * @param  ReceiptLineReference|null  $ReceiptLineReference  Fatura ile ilişkili alındı dokümanının kalemlerine referans atmak için kullanılır.
-     * @param  Delivery|null  $Delivery  Kalem bazlı teslimat olması durumunda bu eleman doldurulur.
      * @param  UblCustomAttr|null  $LineExtensionAmount  Mal/hizmet miktarı ile Mal/hizmet birim fiyatının çarpımı ile bulunan tutardır (varsa iskonto düşülür) (val = string, attrs = [currencyID="TRY"])
+     * @param  Delivery|null  $Delivery  Kalem bazlı teslimat olması durumunda bu eleman doldurulur.
      * @param  AllowanceCharge|null  $AllowanceCharge  Kalem bazlı ıskonto/artırım tutarıdır.
      * @param  TaxTotal|null  $TaxTotal  Kalem bazlı vergi bilgilerinin girildiği elemandır.
      * @param  WithholdingTaxTotal|null  $WithholdingTaxTotal  Kalem bazlı tevkifat uygulanması durumunda bu eleman kullanılır.
@@ -32,8 +32,8 @@ class InvoiceLine
         public ?OrderLineReference $OrderLineReference = null,
         public ?DespatchLineReference $DespatchLineReference = null,
         public ?ReceiptLineReference $ReceiptLineReference = null,
-        public ?Delivery $Delivery = null,
         public ?UblCustomAttr $LineExtensionAmount = null,
+        public ?Delivery $Delivery = null,
         public ?AllowanceCharge $AllowanceCharge = null,
         public ?TaxTotal $TaxTotal = null,
         public ?WithholdingTaxTotal $WithholdingTaxTotal = null,
